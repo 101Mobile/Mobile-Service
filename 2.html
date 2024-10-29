@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>101Mobile - Mobile Mechanic Service</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>101Mobile</h1>
+    <p>We come to you. Expert car care at your convenience!</p>
+  </header>
+
+  <main>
+    <section class="service-selection">
+      <h2>Select Your Service</h2>
+      <form id="service-form">
+        <label for="service-dropdown">Choose a Service:</label>
+        <select id="service-dropdown" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="oilChange" data-price="60">Oil Change - $60</option>
+          <option value="brakeReplacement" data-price="150">Brake Replacement - $150</option>
+          <option value="batteryReplacement" data-price="120">Battery Replacement - $120</option>
+          <option value="tireChange" data-price="80">Tire Change - $80</option>
+          <option value="engineDiagnostics" data-price="100">Engine Diagnostics - $100</option>
+          <option value="other" data-price="50">Other (Starting at $50)</option>
+        </select>
+        
+        <div class="total">
+          <h3>Total Cost: <span id="total-price">$0</span></h3>
+        </div>
+
+        <button type="button" onclick="openPayment()">Proceed to Payment</button>
+      </form>
+    </section>
+
+    <section id="payment-section" class="hidden">
+      <h2>Payment</h2>
+      <p>Please enter your payment details to confirm the booking.</p>
+      <!-- Placeholder for Payment Gateway Integration -->
+      <button type="button" onclick="confirmBooking()">Pay Now</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 101Mobile. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
